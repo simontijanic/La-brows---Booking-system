@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="LA BROWS - Din plass for enkelhet, kjærlighet, og omsorg. Oppdag spesialtilbudene våre hver måned!" />
+    <meta name="keywords" content="LA BROWS, skjønnhet, bryn, hår, spesialtilbud, Oslo, microblading, vippeløft" />
+    <meta name="author" content="LA BROWS" />
+    <meta property="og:title" content="LA BROWS | Skjønnhet og velvære i Oslo" />
+    <meta property="og:description" content="Et sted for enkelhet, kjærlighet og omsorg. Spesialtilbud for våre kunder hver måned." />
+    <meta property="og:image" content="/gfx/iStock-479936620.jpg" />
+    <meta property="og:url" content="https://www.labrows.no" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <title>LA BROWS | Booking</title>
+  </head>
+  <body>
+    <section class="front urbanist">
+      <header>
+        <%- include('components/navbar') %>
+        <div class="introductionText">
+          <div class="text">
+            <h1>BOOK TIME HER</span></h1>
+            <p>
+              Et sted for enkelhet, kjærlighet og omsorg. <br />
+              Spesialtilbud for våre kunder hver måned.
+            </p>
+          </div>
+        </div>
+      </header>
+      <div class="bookingContainer">
+        <form action="/booking" method="post">
+            <label for="date">Dag for boooking:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="contact">E-post:</label>
+            <input type="text" id="contact" name="contact" placeholder="Legg til epost her" required>
+
+            <label for="appointment">Hvilken tjeneste å booke:</label>
+            <select id="appointment" name="appointment" required>
+                <option value="Microblading">MICROBLADING</option>
+                <option value="Microneedling">MICRONEEDLING</option>
+                <option value="Brynslaminering">BRYNSLAMINERING</option>
+                <option value="Forming av bryn">FORMING AV BRYN</option>
+                <option value="Farging av bryn">FARGING AV BRYN</option>
+                <option value="Vippeløft">VIPPELØFT</option>
+                <option value="Farging av vipper">FARGING AV VIPPER</option>
+            </select>
+
+            <label for="time">Hvilket klokkeslett:</label>
+            <input type="time" id="time" name="time">
+
+            <label for="special">Spesielle forespørseler:</label>
+            <textarea id="special" name="special" rows="3" placeholder="Legg gjerne til spesielle forespørseler"></textarea>
+
+            <label for="name">Ditt navn:</label>
+            <input type="text" id="name" name="name" placeholder="Fornavn og etternavn" required>
+
+            <% if (typeof errors !== 'undefined' && errors.length > 0) { %>
+                <div class="error-summary">
+                  <ul>
+                    <% errors.forEach(error => { %>
+                      <li><%= error.msg %></li>
+                    <% }); %>
+                  </ul>
+                </div>
+              <% } %>
+                         
+            <button type="submit">Book Nå</button>
+        </form>
+      </div>
+    </section>
+
+    <%- include('components/footer') %>
+  </body>
+</html>

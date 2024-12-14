@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="LA BROWS - Din plass for enkelhet, kjærlighet, og omsorg. Oppdag spesialtilbudene våre hver måned!" />
+    <meta name="keywords" content="LA BROWS, skjønnhet, bryn, hår, spesialtilbud, Oslo, microblading, vippeløft" />
+    <meta name="author" content="LA BROWS" />
+    <meta property="og:title" content="LA BROWS | Skjønnhet og velvære i Oslo" />
+    <meta property="og:description" content="Et sted for enkelhet, kjærlighet og omsorg. Spesialtilbud for våre kunder hver måned." />
+    <meta property="og:image" content="/gfx/iStock-479936620.jpg" />
+    <meta property="og:url" content="https://www.labrows.no" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <title>LA BROWS | Skjønnhet og Velvære</title>
+  </head>
+  <body>
+    <section class="front urbanist">
+      <header>
+        <%- include('components/navbar') %>
+        <div class="introductionText">
+          <div class="text">
+            <h1>LA <span>BROWS</span></h1>
+            <p>
+              Et sted for enkelhet, kjærlighet og omsorg. <br />
+              Spesialtilbud for våre kunder hver måned.
+            </p>
+          </div>
+        </div>
+        <div class="campaingImages">
+          <div class="image">
+            <img src="/gfx/iStock-479936620.jpg" alt="Spesialtilbud bilde 1" loading="lazy" />
+          </div>
+          <div class="image">
+            <img src="/gfx/iStock-955023740.jpg" alt="Spesialtilbud bilde 2" loading="lazy" />
+          </div>
+        </div>
+      </header>
+      <div class="imageContainer">
+        <img src="/gfx/iStock-479719152.jpg" alt="Studio bilde av LA BROWS" loading="lazy" />
+      </div>
+    </section>
+
+    <section class="hvorfor urbanist half">
+      <h1>Hvorfor velge oss?</h1>
+      <div class="buttons">
+        <div class="button">
+          <h2>Erfarne spesialister</h2>
+          <p>
+            Forbedrer ferdighetene sine årlig gjennom kurs og bruker dem i
+            arbeidet
+          </p>
+        </div>
+        <div class="button">
+          <h2>Premium-produkter</h2>
+          <p>
+            Vi bruker de beste produktene: ORGANIC BROW, TOKIO, INKARAMI, KEVIN
+            MURPHY
+          </p>
+        </div>
+        <div class="button">
+          <h2>Spesialtilbud</h2>
+          <p>Hver måned oppdaterer vi våre spesialtilbud for hår</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="tjenester urbanist">
+      <h1>Tjenester</h1>
+      <div class="grid-container">
+        <div
+          class="grid-item large-item"
+          style="background-image: url('/gfx/iStock-1348298387.jpg')"
+        >
+          <span>Microblading</span>
+        </div>
+        <div
+          class="grid-item"
+          style="background-image: url('/gfx/iStock-1348298392.jpg')"
+        >
+          <span>Microneedling</span>
+        </div>
+        <div
+          class="grid-item"
+          style="background-image: url('/gfx/iStock-1405867120.jpg')"
+        >
+          <span>Brynslaminering</span>
+        </div>
+        <div
+          class="grid-item"
+          style="background-image: url('/gfx/iStock-1475361106.jpg')"
+        >
+          <span>Forming og Farging av Bryn</span>
+        </div>
+        <div
+          class="grid-item"
+          style="background-image: url('/gfx/iStock-1804532860.jpg')"
+        >
+          <span>Vippeløft / Farging av Vipper</span>
+        </div>
+      </div>
+    </section>
+
+    <%- include('components/spesialtilbud') %>
+
+    <%- include('components/footer') %>
+  </body>
+</html>

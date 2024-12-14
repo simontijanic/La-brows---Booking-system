@@ -1,0 +1,14 @@
+<nav class="navbar">
+  <a href="/" class="<% if (path=="/") { %>
+   active
+  <% } %>" title="Les mer om oss">Om oss</a>
+  <a href="/tjenester" class="<% if (path=="/tjenester") { %>
+    active
+   <% } %>" title="Utforsk våre tjenester">Tjenester</a>
+  <a id="kampanjerButton" class="<% if (path=="/kampanjer") { %>
+    active
+   <% } %>" href="/kampanjer" title="Se våre kampanjer">Kampanjer</a>
+  <a href="/booking" class="<% if (path=="/booking") { %>
+    active
+   <% } %>" title="Booking">Booking</a>
+</nav>
